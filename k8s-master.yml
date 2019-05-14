@@ -24,8 +24,10 @@
     - name: K8S | Install Master | Change ownership on /.kube/config
       file:
         path: "{{ lookup('env','HOME') }}/.kube/config"
-        owner: vagrant
-        group: vagrant
+        owner: ubuntu
+        group: ubuntu
+        # owner: vagrant
+        # group: vagrant
         # owner: jenkins # vagrant
         # group: jenkins # vagrant
       become: true
